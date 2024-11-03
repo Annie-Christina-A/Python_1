@@ -1,0 +1,78 @@
+class Node:
+    def __init__(self, data):
+        self.prev = None
+        self.data = data
+        self.next = None
+
+
+class DoublyLinkedList:
+
+    def __init__(self):
+        self.head = None
+
+    def addLast(self, val):
+
+        newNode = Node(val)
+
+        if self.head == None:
+            newNode.prev = None
+            newNode.next = None
+            self.head = newNode
+        else:
+            last = self.head
+
+            while last.next != None:
+                last = last.next
+
+            last.next = newNode
+            newNode.prev = last
+            newNode.next = None
+
+    def search(self, key):
+        temp = self.head
+        while temp != None:
+            if temp.data == key:
+                return True
+            temp = temp.next
+        return False
+    
+    def printlist(self):
+
+        temp = self.head
+
+        print("Forward Traversal")
+        while temp != None:
+            print(temp.data)
+            if temp.next == None:
+                last = temp
+            temp = temp.next
+
+        print("Backward Traversal")
+        temp = last
+        while temp != None:
+            print(temp.data)
+            temp = temp.prev
+
+
+if __name__ == '__main__':
+
+    llist = DoublyLinkedList()
+
+    llist.addLast(10)
+    llist.addLast(20)
+    llist.addLast(30)
+    llist.addLast(40)
+
+    print("Doubly Linked List: null<-10<->20<->30<->40->null")
+
+    print("Seraching Element: 30")
+    if llist.search(30):
+        print("Search Found")
+    else:
+        print("Search Not Found")
+
+    print("Seraching Element: 100")
+    if llist.search(100):
+        print("Search Found")
+    else:
+        print("Search Not Found")

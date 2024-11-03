@@ -1,0 +1,32 @@
+data mining
+    
+
+      -> data mining is about finding the trends in data set and using them to identify future patterns
+      -> it is an important step in the knowledge discovery process
+      -> data science is a field of study which includes everything from big data analytics , data mining ,
+         predective modeling , data visualization , mathematics and statistics
+
+
+data mining steps
+          
+      -> steps involved in knowledge discovery in data
+     
+                figure
+
+      -> knowledge discovery is an essential part of data mining . the important steps involved in data mining are -
+            
+                 
+                       . data cleaning
+                       . data integration
+                       . data selection
+                       . data transformation
+                       . data mining
+                       . pattern evaluation
+
+
+data mining application
+         
+           . market and stock analysis
+           . fraud detection
+           . risk management snd corporate analysis
+           . analysing customer life-time value

@@ -1,0 +1,73 @@
+class Node:
+    def __init__(self, val):
+        self.key = val
+        self.left = None
+        self.right = None
+
+def insert(root, val):
+	if root == None:
+		return Node(val)
+	elif root.key < val:
+		root.right = insert(root.right, val)
+	elif root.key > val:
+		root.left = insert(root.left, val)
+	return root
+
+def inorder(root):
+	if root == None:
+		return
+
+	inorder(root.left)
+	print(root.key, end=" ")
+	inorder(root.right)
+
+def removeNode(root, val):
+    if root == None:
+        return None
+    if root.key < val:
+        root.right = removeNode(root.right, val)
+    elif root.key > val:
+        root.left = removeNode(root.left, val)
+    else:
+        if root.left == None and root.right == None:
+            return None
+        elif root.left == None:
+            return root.right
+        elif root.right == None:
+            return root.left
+        else:
+            rightMin = getRightMin(root.right)
+            root.key = rightMin
+            root.right = removeNode(root.right, rightMin)
+    return root
+
+def getRightMin(root):
+    temp = root
+
+    while temp.left != None:
+        temp = temp.left
+    
+    return temp.key
+
+if __name__ == '__main__':
+	
+    root = None
+
+    print("Inserting Element:", 100)
+    root = insert(root, 100)
+    print("Inserting Element:", 50)
+    root = insert(root, 50)
+    print("Inserting Element:", 150)
+    root = insert(root, 150)
+    print("Inserting Element:", 125)
+    root = insert(root, 125)
+
+    print("Before Deletion: Inorder Traversal of BST")
+    inorder(root)
+
+    key = 100
+    print("\nDeleting Element:", key)
+    root = removeNode(root, key)
+
+    print("After Deletion: Inorder Traversal of BST")
+    inorder(root)

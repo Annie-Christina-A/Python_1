@@ -1,0 +1,38 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def addFirst(self, val):
+        newNode = Node(val)
+        newNode.next = self.head
+        self.head = newNode
+
+    def printList(self):
+        temp = self.head
+        print("The LinkedList Elements Are:")
+        
+        while(temp):
+            print(temp.data)
+            temp = temp.next
+
+
+if __name__ == "__main__":
+
+    llist = LinkedList()
+
+    print("Inserting Element: 10")
+    llist.addFirst(10)
+
+    print("Inserting Element: 20")
+    llist.addFirst(20)
+
+    print("Inserting Element: 30")
+    llist.addFirst(30)
+
+    llist.printList()

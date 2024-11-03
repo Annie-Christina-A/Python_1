@@ -1,0 +1,58 @@
+class Node:
+    def __init__(self, data):
+        self.prev = None
+        self.data = data
+        self.next = None
+
+
+class DoublyLinkedList:
+
+    def __init__(self):
+        self.head = None
+
+    def addFirst(self, val):
+
+        newNode = Node(val)
+
+        if self.head == None:
+            newNode.prev = None
+            newNode.next = None
+            self.head = newNode
+        else:
+            newNode.prev = None
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
+    
+    def printlist(self):
+
+        temp = self.head
+
+        print("Forward Traversal")
+        while temp != None:
+            print(temp.data)
+            if temp.next == None:
+                last = temp
+            temp = temp.next
+
+        print("Backward Traversal")
+        temp = last
+        while temp != None:
+            print(temp.data)
+            temp = temp.prev
+
+
+if __name__ == '__main__':
+
+    llist = DoublyLinkedList()
+
+    print("Inserting Element: 10")
+    llist.addFirst(10)
+    print("Inserting Element: 20")
+    llist.addFirst(20)
+    print("Inserting Element: 30")
+    llist.addFirst(30)
+    print("Inserting Element: 40")
+    llist.addFirst(40)
+
+    llist.printlist()

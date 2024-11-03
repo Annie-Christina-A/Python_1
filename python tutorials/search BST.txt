@@ -1,0 +1,47 @@
+class Node:
+    def __init__(self, val):
+        self.key = val
+        self.left = None
+        self.right = None
+
+def insert(root, val):
+	if root == None:
+		return Node(val)
+	elif root.key < val:
+		root.right = insert(root.right, val)
+	elif root.key > val:
+		root.left = insert(root.left, val)
+	return root
+
+def search(root, key):
+        if root == None:
+            return False
+        if root.key == key:
+            return True
+        if root.key < key:
+            return search(root.right,key)
+        else:
+            return search(root.left,key)
+    
+if __name__ == '__main__':
+	
+    root = None
+
+    root = insert(root, 100)
+    root = insert(root, 50)
+    root = insert(root, 150)
+    root = insert(root, 125)
+
+    print("Binary Search Tree Elements Are: 100, 50, 150, 125")
+
+    print("Searching Element:", 50)
+    if search(root, 150) == True:
+    	print("Search Found")
+    else:
+        print("Search Not Found")
+
+    print("Searching Element:", 500)
+    if search(root, 500) == True:
+        print("Search Found")
+    else:
+        print("Search Not Found")

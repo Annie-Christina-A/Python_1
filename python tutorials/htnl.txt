@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>my website</title>
+    <link rel="stylesheet" href="css/styles.css">
+   
+</head>
+<body>
+    <h1>hi all!!!</h1>
+    <table cellspacing="20">
+        <tr>
+            <td><img src="http://3.bp.blogspot.com/-0aQQsCRIJXY/VUcqMjQK4TI/AAAAAAAAAQQ/V4PJtL-9Blo/s1600/dmi.jpg" alt="DMI ENGINEERING COLLEGE"></td>
+    <td><p>this is my first website</p></td>
+    <td><p>welcome u all to my new website</p></td>
+        </tr>
+    </table>
+    
+    <hr>
+    <h3>introduction</h3>
+    <p><em> annie, pursuing computer science enginnering in <strong><a href="https://dmiengg.edu.in/">dmi engineering college</a> </strong></em>.<br>by the time now 
+        i have started my jorney to work becoming a web developer and i found a platform learning web development in udemy
+    hope i complete with lot of interesting tasks and gaining sufficient knowledge from it. here the instructor i follow is ms.Angela </p>
+    <h3>my hobies</h3>
+    <hr>
+    <ul>
+        <li>music</li>
+        <li>singing</li>
+        <li>batminton</li>
+    </ul>
+    <h3>my subjects</h3>
+    <hr>
+    <ol>
+        <li>discrete mathematics</li>
+        <li>data structure</li>
+        <li>oops</li>
+        <li>dpco</li>
+        <li>fods</li>
+    </ol>
+    <h4><a href="contact.html"> contact me</a></h4>
+    <table border="1">
+    <thead>
+        <tr>
+            <th>day</th>
+            <th>sub</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>mon</td>
+            <td>eng</td>
+        </tr>
+        <tr>
+            <td>tue</td>
+            <td>mat</td>
+        </tr>
+        <tr>
+            <td>wed</td>
+            <td>sci</td>
+        </tr>
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+<h3>skills</h3>
+<hr>
+<table cellspacing="10">
+    <tr>
+        <td>singing</td>
+        <td>⭐⭐⭐⭐</td>
+    </tr>
+    <tr>
+        <td>programming</td>
+        <td>⭐⭐⭐⭐⭐</td>
+    </tr>
+    <tr>
+        <td>photography</td>
+        <td>⭐⭐⭐</td>
+    </tr>
+</table>
+   
+
+    <hr>
+    
+</body>
+</html>

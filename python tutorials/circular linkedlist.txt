@@ -1,0 +1,34 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def printList(self):
+        temp = self.head
+        
+        while True:
+            print(temp.data)
+            temp = temp.next
+            if temp == self.head:
+                break
+
+
+if __name__ == "__main__":
+
+    llist = CircularLinkedList()
+
+    llist.head = Node(10)
+    middle = Node(20)
+    last = Node(30)
+
+    llist.head.next = middle
+    middle.next = last
+    last.next = llist.head
+
+    print("Circular Linked List Elements Are:")
+    llist.printList()
